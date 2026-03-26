@@ -227,12 +227,20 @@
         }
       }
 
+      const POINT_COLORS = [
+        '#FF3366', '#FF6633', '#FFCC33', '#33CCFF', '#33FF66',
+        '#FF00FF', '#00FFFF', '#FFFF00', '#00FF00', '#FF0000',
+        '#CC33FF', '#3366FF', '#66FF33', '#FF9933', '#33FFCC',
+        '#FF33CC', '#CCFF33', '#3399FF', '#FF3399', '#99FF33', '#FFAA00'
+      ];
+
       function drawFingertips(hand, gx, gy) {
-        [4, 8, 12, 16, 20].forEach(idx => {
-          let k = hand.keypoints[idx];
+        hand.keypoints.forEach((k, idx) => {
           let x = map(k.x, 0, 640, 0, width) + gx, y = map(k.y, 0, 480, 0, height) + gy;
-          noFill(); stroke(255, 180); circle(x, y, 12);
-          fill(255, 150); textSize(9); text(`ID:${idx}`, x+15, y-10);
+          fill(POINT_COLORS[idx % POINT_COLORS.length]);
+          noStroke();
+          circle(x, y, 20); // 放大圓點
+          fill(0); textSize(10); textAlign(CENTER, CENTER); text(idx, x, y);
         });
       }
 
