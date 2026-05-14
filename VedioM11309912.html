@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緯大雞排主題探索報告 - NTUST 侯玫穗</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                        dark: '#0f172a',
+                        accent: '#ef4444',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #ef4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+            transform: scale(1.02);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-12 pb-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-display font-extrabold text-brand-400 tracking-wider mb-4 uppercase text-sm md:text-base">M11309912</h2>
+            <h1 class="text-5xl md:text-8xl font-display font-black mb-6 leading-tight">
+                <span class="gradient-text">緯大雞排</span><br/>
+                <span class="text-white">主題探索報告</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-400 text-lg md:text-xl leading-relaxed">
+                深耕台北二十載，以厚實肉質與蒜香靈魂打造的台式炸雞傳奇。
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-6 space-y-24 pb-24">
+        
+        <!-- 1. Infographic Top (置頂) -->
+        <section id="infographic" class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-accent rounded-[26px] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div class="relative glass-card overflow-hidden">
+                <div class="p-4 md:p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-2 h-8 bg-brand-500 rounded-full"></div>
+                        <h3 class="text-2xl font-bold font-display">品牌資訊圖表 <span class="text-brand-500/50 text-sm ml-2">INFOGRAPHIC</span></h3>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl border border-white/5">
+                        <img src='https://opal.google/board/blobs/0c0d6da0-e1be-4dae-93eb-92790727242d' alt='緯大雞排品牌資訊圖表' class="w-full h-auto hover:scale-[1.01] transition-transform duration-700" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Video Center (置中) -->
+        <section id="video-content" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-tr from-accent to-brand-500 rounded-3xl blur opacity-20"></div>
+                    <div class="relative bg-black rounded-3xl overflow-hidden shadow-2xl aspect-video border border-white/10">
+                        <video 
+                            src='https://opal.google/board/blobs/60d5e353-1839-452f-91eb-da00b03ba66d' 
+                            class="w-full h-full object-cover"
+                            controls
+                            autoplay
+                            muted
+                            loop
+                        ></video>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 space-y-6">
+                <div class="glass-card p-8 border-l-4 border-l-brand-500">
+                    <h3 class="text-3xl font-display font-bold mb-4">視覺與聽覺的盛宴</h3>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        這段摘要短影片展現了緯大雞排「厚實、酥脆、多汁」的台式精髓。搭配充滿活力的節奏，完美勾勒出雞排愛好者的夢幻體驗。
+                    </p>
+                    <div class="bg-dark/50 p-4 rounded-2xl flex items-center gap-4">
+                        <div class="bg-brand-500/20 p-3 rounded-full">
+                            <svg class="w-6 h-6 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Background Music</p>
+                            <audio src='https://opal.google/board/blobs/2bc4409f-cf74-4df1-81fb-471c49b7e4d6' controls class="w-full h-8 mt-1"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Report Bottom (置底) -->
+        <section id="report" class="space-y-12">
+            <!-- Summary Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all duration-300">
+                    <div class="text-brand-400 font-bold mb-2">品牌概況</div>
+                    <p class="text-sm text-slate-300">起源於台北松山，深耕逾20年，北部知名雞排指標。</p>
+                </div>
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all duration-300 border-t-brand-500 border-t-2">
+                    <div class="text-brand-400 font-bold mb-2">核心特色</div>
+                    <p class="text-sm text-slate-300">厚實肉質、蒜香醃漬、乾粉酥脆外皮。</p>
+                </div>
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all duration-300">
+                    <div class="text-brand-400 font-bold mb-2">靈魂品項</div>
+                    <p class="text-sm text-slate-300">網友譽為「靈魂本體」的無骨雞柳。</p>
+                </div>
+                <div class="glass-card p-6 hover:translate-y-[-5px] transition-all duration-300">
+                    <div class="text-brand-400 font-bold mb-2">大眾評價</div>
+                    <p class="text-sm text-slate-300">外皮如餅乾般酥脆，台北必吃雞排名單常客。</p>
+                </div>
+            </div>
+
+            <!-- Detailed Content -->
+            <div class="glass-card p-8 md:p-12 space-y-16">
+                <!-- Section 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <div class="md:col-span-4">
+                        <h4 class="text-2xl font-bold text-brand-400 sticky top-12">一、 品牌起源與經營背景</h4>
+                    </div>
+                    <div class="md:col-span-8 text-slate-300 leading-relaxed space-y-4 text-lg">
+                        <p>緯大雞排（Wei-Da Fried Chicken）自創立以來已在台北市深耕逾二十載，其<span class="text-white font-semibold">創始店</span>位於松山區北寧路，鄰近台北小巨蛋。創辦人王緯大先生秉持著對食材的熱忱，研發出獨特的炸雞粉料與醬汁。</p>
+                        <p>目前品牌主要透過加盟體系擴張，分店遍布雙北地區，其中<span class="text-white font-semibold">吳興店</span>因服務周邊醫護人員與學生，成為當地著名的下午茶首選。</p>
+                    </div>
+                </div>
+
+                <div class="h-px bg-white/5 w-full"></div>
+
+                <!-- Section 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <div class="md:col-span-4">
+                        <h4 class="text-2xl font-bold text-brand-400 sticky top-12">二、 產品製程與口感特色</h4>
+                    </div>
+                    <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white/5 p-6 rounded-2xl">
+                            <h5 class="text-brand-300 font-bold mb-3 flex items-center gap-2">
+                                <span class="bg-brand-500 text-dark w-6 h-6 flex items-center justify-center rounded-full text-xs">1</span>
+                                獨門醃漬
+                            </h5>
+                            <p class="text-slate-400 text-sm">含有蒜頭、醬油及多種中藥材，風味帶有微甜感與濃郁蒜香。</p>
+                        </div>
+                        <div class="bg-white/5 p-6 rounded-2xl">
+                            <h5 class="text-brand-300 font-bold mb-3 flex items-center gap-2">
+                                <span class="bg-brand-500 text-dark w-6 h-6 flex items-center justify-center rounded-full text-xs">2</span>
+                                酥炸外皮
+                            </h5>
+                            <p class="text-slate-400 text-sm">採用乾粉（Dry Powder）裹粉法，形成具顆粒感的餅乾級酥脆外衣。</p>
+                        </div>
+                        <div class="bg-white/5 p-6 rounded-2xl sm:col-span-2">
+                            <h5 class="text-brand-300 font-bold mb-3 flex items-center gap-2">
+                                <span class="bg-brand-500 text-dark w-6 h-6 flex items-center justify-center rounded-full text-xs">3</span>
+                                肉質厚度
+                            </h5>
+                            <p class="text-slate-400 text-sm">不刻意敲薄破壞纖維，保留紮實厚度，鎖住豐沛肉汁。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px bg-white/5 w-full"></div>
+
+                <!-- Section 3 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <div class="md:col-span-4">
+                        <h4 class="text-2xl font-bold text-brand-400 sticky top-12">三、 推薦品項分析</h4>
+                    </div>
+                    <div class="md:col-span-8 space-y-6">
+                        <div class="flex gap-4">
+                            <div class="shrink-0 w-1 bg-accent rounded-full"></div>
+                            <div>
+                                <h5 class="text-white font-bold text-xl mb-1">緯大雞排 (Signature Chicken Steak)</h5>
+                                <p class="text-slate-400">招牌代表作，主打大份量與噴汁感，外皮爽脆鮮甜。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="shrink-0 w-1 bg-accent rounded-full"></div>
+                            <div>
+                                <h5 class="text-white font-bold text-xl mb-1">緯大雞柳 (Chicken Tenders)</h5>
+                                <p class="text-slate-400">品牌靈魂，選用無骨雞柳條，肉質滑嫩不乾柴，饕客一致首選。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="shrink-0 w-1 bg-accent rounded-full"></div>
+                            <div>
+                                <h5 class="text-white font-bold text-xl mb-1">雞翅與傳統炸物</h5>
+                                <p class="text-slate-400">雞翅CP值高，另有甜不辣、花枝丸等經典台式點心。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-px bg-white/5 w-full"></div>
+
+                <!-- Section 4 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <div class="md:col-span-4">
+                        <h4 class="text-2xl font-bold text-brand-400 sticky top-12">四、 媒體與民眾評價</h4>
+                    </div>
+                    <div class="md:col-span-8 bg-brand-500/5 p-8 rounded-3xl border border-brand-500/10 italic text-slate-300">
+                        「台北五大雞排之一」、「外皮脆得像餅乾」、「雖然口味重，但蒜味非常解膩」。多次受《食尚玩家》報導，確立了在台式炸雞界的老字號地位。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion Box -->
+            <div class="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-brand-600 to-orange-800 p-1">
+                <div class="bg-dark rounded-[30px] p-8 md:p-12">
+                    <h3 class="text-3xl font-display font-black mb-6">簡要結論</h3>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                        緯大雞排憑藉著傳統乾粉炸法的獨特外皮，以及層次分明的蒜香醃漬工藝，成功在台北炸雞市場佔有一席之地。對於追求「厚實」、「酥脆」與「重口味」的食客而言，這是一個指標性的品牌。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold text-brand-400 uppercase tracking-tighter">#台北雞排</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold text-brand-400 uppercase tracking-tighter">#蒜香靈魂</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold text-brand-400 uppercase tracking-tighter">#二十年老店</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="px-8 py-10 glass-card">
+                <h4 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">引用文獻來源</h4>
+                <ol class="space-y-3 text-sm text-slate-400 list-decimal pl-5">
+                    <li>緯大雞排官方資訊與各加盟分店概況（2024-2026 整理）。</li>
+                    <li>食尚玩家與非凡大探索美食報導回顧：台北必吃傳統雞排特搜。</li>
+                    <li>網路美食部落格：愛吃鬼芸芸及樂活的大叔之台北小巨蛋周邊美食筆記。</li>
+                    <li>PTT Food版與 Dcard 美食版：關於「緯大雞柳」與「傳統乾粉雞排」之鄉民綜合評踐。</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Final Centered Footer Design (As part of content flow) -->
+        <div class="flex flex-col items-center justify-center space-y-4 py-12 border-t border-white/5">
+            <div class="text-center">
+                <p class="text-xl font-medium tracking-tight">
+                    【主題探索報告】by <i class="text-red-500 font-bold">NTUST-侯玫穗</i>
+                </p>
+                <p class="text-slate-500 mt-2 font-display">學號：M11309912</p>
+            </div>
+            <div class="w-12 h-1 bg-brand-500 rounded-full mt-4"></div>
+        </div>
+
+    </main>
+
+    <script>
+        // Scroll reveal animation simple implementation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
